@@ -1,4 +1,61 @@
-/* Estructura de CSS */
-h1,h2{text-align: center;background-color: azure;}
+/* Estructura de CSS
+selector{
+        propiedad: valor
+}
+*/
 
 body{background-color:brown;}
+
+h1,h2{text-align: center;background-color: azure;}
+
+header{ background-image: url(../img/burger.jfif);
+    height: 165px;
+    width: 100%;
+    display: flex;
+/*    justify-content: flex-end; */ 
+    justify-content: center; 
+    position: fixed;
+}
+
+header h1{
+    background-color: rgba(255, 255, 255, 0.616);
+    padding: 10px;
+    width: 300px;
+    height: 50px;
+}
+
+nav {
+    background-color: transparent
+    height: 150;
+    position: fixed;
+    top: 0px;
+    left: 50px;
+}
+
+nav ol li{
+    background-color: turquoise;
+    display: inline; 
+    color: white; 
+    padding: 15px; 
+    margin: 0px 10px;
+}
+/*text-decoration: none para que no muestre el subrayado del hipervinculo*/
+nav ol li a{text-decoration: none; color: white;}
+
+/*:hover es cuando pasa el cursor sobre el elemento */
+nav ol li:hover{background-color: blueviolet; color: black; box-shadow: 5px 3px 5px black;}
+
+/*black para que cuando pasa el cursor sobre el texto, habrá cambiado a violeta y debe cambia a negro para ser legible*/
+nav ol li a:hover{color: black;}
+
+article{
+    padding-top: 100px;
+    background: linear-gradient(red,yellow);
+    width: 80%;
+    margin-left: 10%;
+}
+
+article#casera{
+    background: linear-gradient(green,blue);
+}
+
