@@ -1,0 +1,64 @@
+body{display: flexbox;}
+
+i{background-color: transparent; }
+
+@keyframes MoverHaciaAbajo {
+    from{top:50px;color: tomato;}
+    to{top:100px;color: teal;}
+}
+
+@keyframes MoverADerecha {
+    from{left:200px;opacity: 0;}
+    to{left:350px;opacity: 1;}
+}
+
+@keyframes otra {
+    0%{color: red;}
+    25%{color: green;}
+    50%{color: blue;}
+}
+
+#shuttle:hover{
+    position:absolute;
+    animation: MoverADerecha;
+    animation-duration: 5s;
+    /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+}
+
+#satelite:hover{
+    /* position:absolute; */
+    /* animation: MoverHaciaAbajo; */
+    animation: otra;
+    animation-duration: 5s; 
+ }
+ 
+ @keyframes menu1{
+    0%{
+       padding: 10px;
+       color: black;
+       background-color: white;    
+    }
+    100%{
+       padding: 20px;
+       color: white;
+       background-color: black;
+       box-shadow: 5px 5px 5px black;
+       border-radius: 40px; 
+       font-size: 30px;
+    }
+}
+
+ ul li{
+    display:inline;
+    padding: 10px;
+    color: blue;
+    background-color: green;
+    cursor: pointer;
+ }
+
+ ul li:hover{
+    animation-name: menu1;
+    animation-delay: 1s;
+    animation-iteration-count: infinite;
+    background-color: blue;
+ }

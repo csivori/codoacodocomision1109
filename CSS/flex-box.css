@@ -1,0 +1,34 @@
+#justify{
+    display:flex;
+    /* justify-content:center; Hijos Centrados  */
+    /* justify-content:flex-start; Hijos a Izquierda */
+    /* justify-content:flex-end; Hijos a Derecha  */
+    justify-content: space-around;
+    /* justify-content: space-evenly; Distribuye igualitariamente el espacio entre Hijos incluyendo al principio y al final */
+    /* justify-content: space-between; Distribuye igualitariamente el espacio entre Hijos */
+ 
+}
+
+.primer{
+    /* width: 10px; */
+    height: 100px;
+    background-color: violet;
+}
+
+.primer:nth-child(odd){
+    background-color: red;    
+}
+
+.primer::before{
+    content: "Antes";
+}
+
+.primer::after{
+    content: "Despues";
+}
+
+ol{
+    display: flexbox;
+    /* justify-content: space-evenly; */
+    /* flex-direction: column; */
+}
