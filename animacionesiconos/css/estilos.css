@@ -8,8 +8,12 @@ i{background-color: transparent; }
 }
 
 @keyframes MoverADerecha {
-    from{left:200px;opacity: 0;}
-    to{left:350px;opacity: 1;}
+    from{left: 200px; opacity: 0;}
+    to{left: 350px; opacity: 1;}
+}
+@keyframes Volver {
+    from{left: 350px; opacity: 1;}
+    to{left: 200px; opacity: 0;}
 }
 
 @keyframes otra {
@@ -20,8 +24,13 @@ i{background-color: transparent; }
 
 #shuttle:hover{
     position:absolute;
-    animation: MoverADerecha;
-    animation-duration: 5s;
+    animation: MoverADerecha 5s;
+    /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+}
+
+#shuttle2:hover{
+    position:absolute;
+    animation: Volver 5s;
     /* animation: name duration timing-function delay iteration-count direction fill-mode; */
 }
 
@@ -60,5 +69,5 @@ i{background-color: transparent; }
     animation-name: menu1;
     animation-delay: 1s;
     animation-iteration-count: infinite;
-    background-color: blue;
+    /* background-color: blue; */
  }
