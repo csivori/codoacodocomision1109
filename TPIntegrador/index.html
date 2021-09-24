@@ -14,28 +14,27 @@
 
 <body>
     <header>
-        <div id="Oscurecedor"></div>
         <nav class="navbar navbar-expand-lg navbar-dark CaC-NavBsAs">
             <div class="container-fluid CaC-Menu">
                 <a class="navbar-brand" href="#"><img src="./img/codoacodo.png" alt="Logo Codo a Codo" width="120">Conf
                     Bs As</a>
-                <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
-                </button> -->
+                </button>
                 <div class="collapse navbar-collapse CaC-Menu" id="navbarNav">
                     <ul class="navbar-nav">
                         <li class="nav-item">
                             <a class="nav-link active" aria-current="page" href="#">La conferencia</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Los oradores</a>
+                            <a class="nav-link" href="#CaC-Oradores">Los oradores</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">El lugar y la fecha</a>
+                            <a class="nav-link" href="#CaC-Lugar">El lugar y la fecha</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Conviértete en orador</a>
+                            <a class="nav-link" href="#CaC-FormParaAnotarseP">Conviértete en orador</a>
                         </li>
                         <li class="nav-item">
                             <a id="CaC-Comprar" class="nav-link" href="#">Comprar tickets</a>
@@ -44,27 +43,122 @@
                 </div>
             </div>
         </nav>
-        <div class="CaC-bg-imageP">
-            <div class="CaC-bg-imageH">
+        <div class="CaC-HdrBgImageMsgP">
+            <div class="CaC-HdrBgImageMsgH">
                 <h2>Conf Bs As</h2>
                 <p>Bs As llega por primera vez a la Argentina. Un evento para compartir con nuestra
                     comunidad el conocimiento y experiencia de los expertos que estan creando el futuro de Internet. Ven
                     a conocer a miembros del evento, a otros estudiantes de Codo a Codo y los oradores de primer nivel
                     que
                     tenemos para ti. Te esperamos!</p>
-                <div class="botonesHdr">
-                    <button type="button" class="btn btn-outline-light">Quiero ser orador</button>
+                <div>
+                    <!-- <button type="button" class="btn btn-outline-light" href="#CaC-FormParaAnotarseP">Quiero ser orador</button> -->
+                    <a href="#CaC-FormParaAnotarseP" class="btn btn-outline-light">Quiero ser orador</a>
                     <button type="button" class="btn btn-success">Comprar tickets</button>
                 </div>
             </div>
         </div>
     </header>
     <main>
-        <h1>Acá va el Main</h1>
+        <div id="CaC-Oradores">
+            <p class="text-center">CONOCE A LOS</p>
+            <h3 class="text-center">ORADORES</h3>
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+                <div class="col">
+                    <div class="card">
+                        <img src="./img/steve.jpg" class="card-img-top" alt="Foto Steve Jobs">
+                        <div class="card-body">
+                            <div class="CaC-Container">
+                                <span class="CaC-habilidad CaC-habilidad-JS">JavaScript</span>
+                                <span class="CaC-habilidad CaC-habilidad-React">React</span>
+                            </div>
+                            <h5 class="card-title">Steve Jobs</h5>
+                            <p class="card-text ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum,
+                                accusamus
+                                reiciendis praesentium voluptates quia ut est minus voluptatem nam voluptatibus nisi ea
+                                fuga voluptas ipsam nemo aspernatur. Accusamus beatae maiores esse molestiae amet
+                                voluptatum!</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <img src="./img/bill.jpg" class="card-img-top" alt="Foto Bill Gates">
+                        <div class="card-body">
+                            <div class="CaC-Container">
+                                <span class="CaC-habilidad CaC-habilidad-JS">JavaScript</span>
+                                <span class="CaC-habilidad CaC-habilidad-React">React</span>
+                            </div>
+                            <h5 class="card-title">Bill Gates</h5>
+                            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, accusamus
+                                reiciendis praesentium voluptates quia ut est minus voluptatem nam voluptatibus nisi ea
+                                fuga voluptas ipsam nemo aspernatur. Accusamus beatae maiores esse molestiae amet
+                                voluptatum!</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <img src="./img/ada.jpeg" class="card-img-top" alt="Foto Ada Lovelace">
+                        <div class="card-body">
+                            <div class="CaC-Container">
+                                <span class="CaC-habilidad CaC-habilidad-Negocios">Negocios</span>
+                                <span class="CaC-habilidad CaC-habilidad-Startups">Startups</span>
+                            </div>
+                            <h5 class="card-title">Ada Lovelace</h5>
+                            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, accusamus
+                                reiciendis praesentium voluptates quia ut est minus voluptatem nam voluptatibus nisi ea
+                                fuga voluptas ipsam nemo aspernatur. Accusamus beatae maiores esse molestiae amet
+                                voluptatum!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="CaC-Lugar">
+            <div id="CaC-LugarFoto"></div>
+            <div id="CaC-LugarDescripcion">
+                <h3>Bs As - Octubre</h3>
+                <p>Buenos Aires es la provincia y localidad mas grande del estado de Argentina, en los Estados Unidos.
+                    Honolulu es la mas sureña de entre las principales ciudades estadounidenses. Aunque el nombre de
+                    Honolulu se refiere al área urbana en la costa sureste de la isla de Oahu, la ciudad y el condado de
+                    Honolulu han formado una ciudad-condado consolidada que cubre toda la ciudad (aproximadamente 600
+                    km<sup>2</sup> de superficie).</p>
+                <button type="button" class="btn btn-outline-light btn-sm">Conocé más</button>
+            </div>
+        </div>
     </main>
     <footer>
-        <h1>Acá va el Footer</h1>
+        <div id="CaC-FormParaAnotarseP">
+            <div id="CaC-FormParaAnotarseH">
+                <p class="text-center">CONVIÉRTETE EN UN</p>
+                <h3 class="text-center">ORADOR</h3>
+                <p class="text-center CaC-Arenga">Anótate como orador para dar una <a href="#"
+                        title="Charla de no mas de 5 minutos en la que cuentas tu idea.">charla ignite</a>. Cuéntanos de
+                    que
+                    quieres hablar!</p>
+                <div class="CaC-Container2">
+                    <input class="form-control form-control-sm CaC-FormNomYApp" type="text" placeholder="Nombre"
+                        aria-label="Nombre del Orador">
+                    <input class="form-control form-control-sm CaC-FormNomYApp" type="text" placeholder="Apellido"
+                        aria-label="Apellido del Orador">
+                </div>
+                <textarea class="form-control" placeholder="Sobre que quieres hablar?" rows="3"></textarea>
+                <p class="CaC-Aclaracion">Recuerda incluir un título para tu charla</p>
+                <button type="submit" class="btn btn-success">Enviar</button>
+            </div>
+        </div>
+        <div id="Ftr" class="CaC-Container3">
+            <span class="CaC-FtrRef"><a href="#">Preguntas frecuentes</a></span>
+            <span class="CaC-FtrRef"><a href="#">Contáctanos</a></span>
+            <span class="CaC-FtrRef"><a href="#">Prensa</a></span>
+            <span class="CaC-FtrRef"><a href="#">Conferencias</a></span>
+            <span class="CaC-FtrRef"><a href="#">Términos y condiciones</a></span>
+            <span class="CaC-FtrRef"><a href="#">Privacidad</a></span>
+            <span class="CaC-FtrRef"><a href="#">Estudiantes</a></span>
+        </div>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
 </body>
 
 </html>
