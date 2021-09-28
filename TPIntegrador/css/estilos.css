@@ -22,6 +22,19 @@ header{
 .CaC-NavBsAs {
     background-color: rgb(53, 58, 64);
     padding: 0.5% 5%;
+    height: 10vh;
+}
+
+.CaC-HdrBgImageMsgP {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-right: 9vw;
+    margin-bottom: 1vw;
+    height: 87vh;
+    min-height: 280px;
+    text-align: right;
+    color: white;
 }
 
 .CaC-Menu {
@@ -34,19 +47,8 @@ header{
     color: green;
 }
 
-.CaC-HdrBgImageMsgP {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    margin-right: 9vw;
-    margin-bottom: 1vw;
-    height: 84vh;
-    min-height: 280px;
-    text-align: right;
-    color: white;
-}
-
 .CaC-HdrBgImageMsgH {width: calc(32vw + 18vh);}
+@media (max-width:800px){.CaC-HdrBgImageMsgH{width:80vw}}
 .CaC-HdrBgImageMsgH>p{font-size: 95%;}
 .btn{margin-top: 5px;}
 .btn-success{background-color:#27A844; border-color:#27A844}
