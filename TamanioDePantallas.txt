@@ -1,0 +1,7 @@
+                vw    vh  Ratio 	
+iPhone SE1      320   568  
+iPhone SE2/8    375   667
+iPad           1024   768
+Monitor        1280  1024
+Laptop         1920  1080
+

@@ -11,6 +11,8 @@ console.log(nombre + nombre2 + apellido);
 console.log(nombre + nombre2 + apellido + num1 * 5 + 3);
 console.log(nombre + nombre2 + apellido + (num1 * 5 + 3));
 
+console.log(parseFloat(" "));
+
 /* Condicionales */
 /* Igual ==  /  Distinto !=  /  And &&  /  Or ||  */
 if (num1 == num2) {
