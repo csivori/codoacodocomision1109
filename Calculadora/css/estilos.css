@@ -2,8 +2,8 @@
 
 #calculadora{width: 400px; display: flex; justify-content: space-around; align-items: center; flex-flow: row wrap; border:2px dashed black}
 
-#formula{padding: 1px 10px; font-size: 0.7rem; text-align: start; border: 2px dashed green;}
-#resultado{padding: 1px 10px; font-size: 2rem; text-align: end; border: 2px dashed red;}
+#formula{padding: 1px 10px; font-size: 0.7rem; text-align: start;}
+#resultado{padding: 1px 10px; font-size: 2rem; text-align: end;}
 .visor{background-color: darkblue; color: white; width: 285px; margin: 10px 5px; border: 2px solid gray;}
 .visor p{margin-bottom: 0;}
 

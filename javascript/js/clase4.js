@@ -25,7 +25,8 @@ let usuario = {
     NyA: 'Pepito FLORES',
     email: 'pepe@yahoo.com',
     pass:'123456',
-    validar:(e,p)=>{return (e === usuario.email && p === usuario.pass) ? true : false}
+    validar:(e,p)=>{return (e === usuario.email && p === usuario.pass) ? true : false},
+    mostrar:()=>{alert(`El email de ${usuario.NyA} es ${usuario.email}`)}
 };
 
 function inicio(){
@@ -35,7 +36,9 @@ function inicio(){
     // alert('Llamando a la función inicio');
     // alert(correo);
     // alert(contrasenia);
-    if (usuario.validar(correo, contrasenia)){elemento.innerHTML = `<h1>Administración</h1>
-    <p>Bienvenid@ ${usuario.NyA}</p>`}
+    if (usuario.validar(correo, contrasenia)){
+      elemento.innerHTML = `<h1>Administración</h1><p>Bienvenid@ ${usuario.NyA}</p>`;
+      usuario.mostrar();
+    }
     else{alert("El correo o la contraseña son inválidos. Reintente");};
 };
