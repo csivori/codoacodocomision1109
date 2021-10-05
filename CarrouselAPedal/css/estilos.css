@@ -1,0 +1,60 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#Carrousel {
+    display: flex;
+    width: 1920px;
+}
+
+#Carrousel>div>img{
+    z-index: -1;
+}
+
+#Controles{
+    display: flexbox;
+    position: absolute;
+    width:inherit;
+    height: inherit;
+    text-align: center;
+}
+
+#Navegacion {
+    padding: 430px 2%;
+    font-size: 1000%;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+}
+
+#Navegacion>a {
+    color: transparent;
+    background-color: transparent;
+}
+
+#Navegacion>a:hover {
+    text-decoration: none;
+    padding: 0 2%;
+    color: #222;
+    background-color: rgba(220, 220, 220, 0.5);
+    border-radius: 30px;
+    user-select: none;
+}
+
+#Puntos{
+    color: #FFF;
+    z-index: 1;
+    display:flex;
+    justify-content: center;
+}
+#Puntos>div{
+    border: 1px solid #FFF;
+    border-radius: 10px;
+    padding: 5px;
+    margin: 0px 5px;
+}
+.PuntoActivo{
+    background-color: #FFF;
+}
