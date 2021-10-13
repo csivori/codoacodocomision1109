@@ -26,3 +26,4 @@ document.getElementById("Atras").addEventListener('click', function () {
 document.getElementById("Adelante").addEventListener('click', function () {
     numFoto = ++numFoto % arrFotos.length; refrescar();
 });
+
