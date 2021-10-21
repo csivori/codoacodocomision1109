@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ejemplo Vue.js</title>
 </head>
+
 <body>
     <!-- Ejemplo 1 -->
     <!-- <div id="app">
@@ -13,16 +15,59 @@
     </div> -->
 
     <!-- Ejemplo 2 -->
-    <div id="app">
+    <!-- <div id="app">
         <p>v-bind es UNIDIRECCIONAL</p>
         <input type="text" v-bind:value="valorBind">
         <p>{{valorBind}}</p>
         <p>v-model es BIDIRECCIONAL</p>
         <input type="text" v-model:value="valorModel">
         <p>{{valorModel}}</p>
+
+        
+        <p>Link dinámico: Ver documentacion de :
+            <a v-bind:href="link">{{nombreLink}}</a>
+        </p>
+    </div> -->
+
+    <!-- Ejemplo 3 -->
+    <!-- <div id="app">
+        <p v-if="nombre">Hola, {{nombre}}</p>
+        <p v-else="nombre">Ingrese su nombre:</p>
+        <p><input type="text" v-model:value="nombre"></p>
+        <ol>
+            <li v-for="tecnologia in tecnologias">{{tecnologia}}</li>
+        </ol>
+    </div> -->
+
+    <!-- Ejemplo 4 -->
+    <!--<div id="formVue">
+        <h2>Métodos !!!</h2>
+        <form v-on:submit.prevent="guardarTarea">
+            <h4>Lista de Tareas</h4>
+            <input type="text" v-model="nuevaTarea">
+            <input type="submit">
+            <ul>
+                <li v-for="tarea in tareas">
+                    {{tarea}}
+                </li>
+            </ul>
+    
+            <!-- para debuggear los valores -->
+<!--            <p>{{$data}}</p>
+        </form>
+    </div> -->
+
+    <!-- Ejemplo 5 (idem 4 pero con Vanilla JS) -->
+        <form>
+            <h4>Lista de Tareas</h4>
+            <input type="text" class="nuevaTarea">
+            <input type="submit" value="Agregar">
+            <ul></ul>
+        </form>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
     <script src="./js/app.js"></script>
 </body>
+
 </html>
