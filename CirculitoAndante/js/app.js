@@ -66,10 +66,10 @@ class Elemento {
 
 let zona1 = new Zona(1, 50, 50, 200, 180, 'lightgray', "zona",
     new Elementos([new Elemento(1, 8, 10, 0, 1, 1, 'red'),
-//                   new Elemento(2, 8, 0, 0, 2, 1, 'green'),
-//                   new Elemento(4, 12, 30, 10, 3, 3, 'magenta'),
-//                   new Elemento(5, 4, 30, 10, 1, 0, 'black'),
-                   new Elemento(3, 8, 20, 30, 1, 2, 'blue')]));
+                   new Elemento(2, 8, 0, 0, 2, 1, 'green'),
+                   new Elemento(4, 12, 30, 10, 3, 3, 'magenta'),
+                   new Elemento(5, 8, 30, 10, 1, 0, 'white'),
+                   new Elemento(3, 16, 20, 30, 1, 2, 'blue')]));
 
 zona1.mostrar();
 var intervalId = setInterval(mover1T, 50);
