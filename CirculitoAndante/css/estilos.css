@@ -1,3 +1,8 @@
+*{
+    box-sizing:border-box;
+    padding: 0;
+    margin: 0;
+}
 #zona{
     display:block;
     position: absolute;
@@ -7,9 +12,6 @@
     height: 350px;
     background: #444;
     border:2px dotted #000;
-    box-sizing:border-box;
-    padding: 0;
-    margin: 0;
     overflow: hidden;
 }
 .zona{
