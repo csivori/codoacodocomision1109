@@ -1,35 +1,83 @@
-*{
-    box-sizing:border-box;
+* {
+    box-sizing: border-box;
     padding: 0;
     margin: 0;
 }
-#zona{
-    display:block;
+
+form {
+    margin: 1% 10%;
+    width: 80%;
+}
+
+.grupo{
+    /* margin: 0 2% 2% 0; */
+    padding: 0.4rem;
+    border: 1px dashed gray;
+    font-size: 85%;
+    font-style: italic;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+.columna{width: 23%; min-height:0rem; margin: 0.2rem; }
+.subgrupo {
+    margin: 0;
+    padding: 0.5rem;
+    font-size: 90%;
+    font-style: normal;
+    display: flex;
+    flex-flow: column wrap;
+    width: fit-content;
+}
+.rb-azul{
+    border: 1px dashed blue;
+}
+.campo {
+    margin: 0.2rem;
+    font-size: 100%;
+    font-weight: 400;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    vertical-align: middle;
+    text-align: center;
+
+}
+
+.TresChars{
+    margin-top: 0.1rem;
+    width: 3rem;
+}
+
+.accion{
+    margin:0.4rem 0;
+}
+
+#zona {
     position: absolute;
-    top:20%;
-    left:40%;
-    width: 250px;
+    width: 80%;
     height: 350px;
     background: #444;
-    border:2px dotted #000;
+    border: 2px dotted #000;
     overflow: hidden;
 }
-.zona{
-    display:block;
+
+.zona {
+    display: block;
     position: absolute;
     background: lightgray;
-    border:2px dotted gray;
-    box-sizing:border-box;
+    border: 2px dotted gray;
+    box-sizing: border-box;
     padding: 0;
     margin: 0;
     overflow: hidden;
 }
 
-.elemento{
+.elemento {
     position: absolute;
     font-size: 1rem;
     text-align: center;
     padding: 0;
     margin: 0;
-    border:1px solid black;
+    border: 1px solid black;
 }

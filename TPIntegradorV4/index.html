@@ -11,9 +11,9 @@
     <link rel="stylesheet" href="./css/TPIntegradorV4.css">
 </head>
 
-<body>
+<body id="CaC-Home">
     <header>
-        <nav id="CaC-Menu" class="navbar fixed-top navbar-expand-lg navbar-dark">
+        <nav id="CaC-Menu" class="navbar fixed-top js-scroll-trigger navbar-expand-lg navbar-dark">
             <div class="container-fluid mx-4">
                 <a class="navbar-brand" href="https://www.buenosaires.gob.ar/educacion/codocodo/el-programa"><img
                         id="CaC-Logo" class="img-fluid" src="./img/codoacodo.png" alt="Logo Codo a Codo"> Conf Bs As</a>
@@ -24,11 +24,11 @@
                 </button>
                 <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
                     <div class="navbar-nav">
-                        <a class="nav-link active" aria-current="page" href="#">La conferencia</a>
-                        <a class="nav-link" href="#CaC-Oradores">Los oradores</a>
-                        <a class="nav-link" href="#CaC-Lugar">El lugar y la fecha</a>
-                        <a class="nav-link" href="#CaC-Inscripcion">Conviértete en orador</a>
-                        <a class="nav-link pe-0 CaC-Compra" href="javascript:void(0)" onclick="comprarTickets()">Comprar
+                        <a class="nav-link js-scroll-trigger active" aria-current="page" href="#CaC-Home">La conferencia</a>
+                        <a class="nav-link js-scroll-trigger" href="#CaC-Oradores">Los oradores</a>
+                        <a class="nav-link js-scroll-trigger" href="#CaC-Lugar">El lugar y la fecha</a>
+                        <a class="nav-link js-scroll-trigger" href="#CaC-Inscripcion">Conviértete en orador</a>
+                        <a class="nav-link js-scroll-trigger pe-0 CaC-Compra" href="javascript:void(0)" onclick="comprarTickets()">Comprar
                             tickets</a>
                     </div>
                 </div>
@@ -36,85 +36,51 @@
         </nav>
     </header>
     <main>
-        <section id="CaC-SoloView">
-            <div class="card bg-dark text-white">
-                <img src="./img/ba1.jpg" class="card-img" alt="...">
-                <div class="card-img-overlay">
-                    <div class="container align-middle">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                            additional content. This content is a little bit longer.</p>
-                        <p class="card-text">Last updated 3 mins ago</p>
-                    </div>
-                </div>
-            </div>
-            <section id="CaC-Hdr" class="container">
-                <div id="CaC-HdrBgImageMsg">
-                    <h2>Conf Bs As</h2>
-                    <p>Bs As llega por primera vez a la Argentina. Un evento para compartir con nuestra
-                        comunidad el conocimiento y experiencia de los expertos que estan creando el futuro de Internet.
-                        Ven
-                        a conocer a miembros del evento, a otros estudiantes de Codo a Codo y los oradores de primer
-                        nivel
-                        que
-                        tenemos para ti. Te esperamos!</p>
-                    <div id="CaC-HdrBgImageBtn">
-                        <a href="#CaC-Inscripcion" class="btn btn-outline-light">Quiero ser orador</a>
-                        <a href="javascript:void(0)" class="btn btn-success" onclick="comprarTickets()">Comprar
-                            tickets</a>
-                    </div>
-                </div>
-            </section>
-            <section id="CaC-Oradores">
-                <p class="text-center">CONOCE A LOS</p>
-                <h3 class="text-center">ORADORES</h3>
-                <div class="row row-cols-1 row-cols-md-3 g-4">
-                    <div class="col">
-                        <div class="card">
-                            <img src="./img/steve.jpg" class="card-img-top" alt="Foto Steve Jobs">
-                            <div class="card-body">
-                                <div class="CaC-Container">
-                                    <span class="CaC-habilidad CaC-habilidad-JS">JavaScript</span>
-                                    <span class="CaC-habilidad CaC-habilidad-React">React</span>
-                                </div>
-                                <h5 class="card-title">Steve Jobs</h5>
-                                <p class="card-text ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum,
-                                    accusamus
-                                    reiciendis praesentium voluptates quia ut est minus voluptatem nam voluptatibus nisi
-                                    ea
-                                    fuga voluptas ipsam nemo aspernatur. Accusamus beatae maiores esse molestiae amet
-                                    voluptatum!</p>
-                            </div>
+        <div data-bs-spy="scroll" data-bs-target="#CaC-Menu" data-bs-offset="0" tabindex="0">
+            <section id="CaC-SoloView">
+                <div class="card bg-dark text-white">
+                    <img src="./img/ba1.jpg" class="card-img" alt="...">
+                    <div class="card-img-overlay">
+                        <div class="container align-middle">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                                additional content. This content is a little bit longer.</p>
+                            <p class="card-text">Last updated 3 mins ago</p>
                         </div>
                     </div>
-                    <div class="col">
-                        <div class="card">
-                            <img src="./img/bill.jpg" class="card-img-top" alt="Foto Bill Gates">
-                            <div class="card-body">
-                                <div class="CaC-Container">
-                                    <span class="CaC-habilidad CaC-habilidad-JS">JavaScript</span>
-                                    <span class="CaC-habilidad CaC-habilidad-React">React</span>
-                                </div>
-                                <h5 class="card-title">Bill Gates</h5>
-                                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum,
-                                    accusamus
-                                    reiciendis praesentium voluptates quia ut est minus voluptatem nam voluptatibus nisi
-                                    ea
-                                    fuga voluptas ipsam nemo aspernatur. Accusamus beatae maiores esse molestiae amet
-                                    voluptatum!</p>
-                            </div>
+                </div>
+                <section id="CaC-Hdr" class="container">
+                    <div id="CaC-HdrBgImageMsg">
+                        <h2>Conf Bs As</h2>
+                        <p>Bs As llega por primera vez a la Argentina. Un evento para compartir con nuestra
+                            comunidad el conocimiento y experiencia de los expertos que estan creando el futuro de
+                            Internet.
+                            Ven
+                            a conocer a miembros del evento, a otros estudiantes de Codo a Codo y los oradores de primer
+                            nivel
+                            que
+                            tenemos para ti. Te esperamos!</p>
+                        <div id="CaC-HdrBgImageBtn">
+                            <a href="#CaC-Inscripcion" class="btn btn-outline-light">Quiero ser orador</a>
+                            <a href="javascript:void(0)" class="btn btn-success" onclick="comprarTickets()">Comprar
+                                tickets</a>
                         </div>
-                        </di+v>
+                    </div>
+                </section>
+                <section id="CaC-Oradores">
+                    <p class="text-center">CONOCE A LOS</p>
+                    <h3 class="text-center">ORADORES</h3>
+                    <div class="row row-cols-1 row-cols-md-3 g-4">
                         <div class="col">
                             <div class="card">
-                                <img src="./img/ada.jpeg" class="card-img-top" alt="Foto Ada Lovelace">
+                                <img src="./img/steve.jpg" class="card-img-top" alt="Foto Steve Jobs">
                                 <div class="card-body">
                                     <div class="CaC-Container">
-                                        <span class="CaC-habilidad CaC-habilidad-Negocios">Negocios</span>
-                                        <span class="CaC-habilidad CaC-habilidad-Startups">Startups</span>
+                                        <span class="CaC-habilidad CaC-habilidad-JS">JavaScript</span>
+                                        <span class="CaC-habilidad CaC-habilidad-React">React</span>
                                     </div>
-                                    <h5 class="card-title">Ada Lovelace</h5>
-                                    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum,
+                                    <h5 class="card-title">Steve Jobs</h5>
+                                    <p class="card-text ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum,
                                         accusamus
                                         reiciendis praesentium voluptates quia ut est minus voluptatem nam voluptatibus
                                         nisi
@@ -125,73 +91,206 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="col">
+                            <div class="card">
+                                <img src="./img/bill.jpg" class="card-img-top" alt="Foto Bill Gates">
+                                <div class="card-body">
+                                    <div class="CaC-Container">
+                                        <span class="CaC-habilidad CaC-habilidad-JS">JavaScript</span>
+                                        <span class="CaC-habilidad CaC-habilidad-React">React</span>
+                                    </div>
+                                    <h5 class="card-title">Bill Gates</h5>
+                                    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum,
+                                        accusamus
+                                        reiciendis praesentium voluptates quia ut est minus voluptatem nam voluptatibus
+                                        nisi
+                                        ea
+                                        fuga voluptas ipsam nemo aspernatur. Accusamus beatae maiores esse molestiae
+                                        amet
+                                        voluptatum!</p>
+                                </div>
+                            </div>
+                            </di+v>
+                            <div class="col">
+                                <div class="card">
+                                    <img src="./img/ada.jpeg" class="card-img-top" alt="Foto Ada Lovelace">
+                                    <div class="card-body">
+                                        <div class="CaC-Container">
+                                            <span class="CaC-habilidad CaC-habilidad-Negocios">Negocios</span>
+                                            <span class="CaC-habilidad CaC-habilidad-Startups">Startups</span>
+                                        </div>
+                                        <h5 class="card-title">Ada Lovelace</h5>
+                                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                            Eum,
+                                            accusamus
+                                            reiciendis praesentium voluptates quia ut est minus voluptatem nam
+                                            voluptatibus
+                                            nisi
+                                            ea
+                                            fuga voluptas ipsam nemo aspernatur. Accusamus beatae maiores esse molestiae
+                                            amet
+                                            voluptatum!</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                </section>
+                <section id="CaC-Lugar">
+                    <div id="CaC-LugarFoto"></div>
+                    <div id="CaC-LugarDescripcion">
+                        <h3>Bs As - Octubre</h3>
+                        <p>Buenos Aires es la provincia y localidad mas grande del estado de Argentina, en los Estados
+                            Unidos.
+                            Honolulu es la mas sureña de entre las principales ciudades estadounidenses. Aunque el
+                            nombre de
+                            Honolulu se refiere al área urbana en la costa sureste de la isla de Oahu, la ciudad y el
+                            condado de
+                            Honolulu han formado una ciudad-condado consolidada que cubre toda la ciudad
+                            (aproximadamente
+                            600
+                            km<sup>2</sup> de superficie).</p>
+                        <button type="button" class="btn btn-outline-light btn-sm">Conocé más</button>
                     </div>
+                </section>
+                <section id="CaC-Inscripcion">
+                    <form id="CaC-FormParaAnotarseH">
+                        <p class="text-center">CONVIÉRTETE EN UN</p>
+                        <h3 class="text-center">ORADOR</h3>
+                        <p class="text-center CaC-Arenga">Anótate como orador para dar una <a href="#"
+                                title="Charla de no mas de 5 minutos en la que cuentas tu idea.">charla ignite</a>.
+                            Cuéntanos de
+                            que
+                            quieres hablar!</p>
+                        <div class="CaC-Container2">
+                            <input class="form-control form-control-sm CaC-FormNomYApp" type="text" placeholder="Nombre"
+                                aria-label="Nombre del Orador">
+                            <input class="form-control form-control-sm CaC-FormNomYApp" type="text"
+                                placeholder="Apellido" aria-label="Apellido del Orador">
+                        </div>
+                        <textarea class="form-control" placeholder="Sobre que quieres hablar?" rows="3"></textarea>
+                        <p class="CaC-Aclaracion">Recuerda incluir un título para tu charla</p>
+                        <button type="submit" class="btn btn-success">Enviar</button>
+                    </form>
+                </section>
             </section>
-            <section id="CaC-Lugar">
-                <div id="CaC-LugarFoto"></div>
-                <div id="CaC-LugarDescripcion">
-                    <h3>Bs As - Octubre</h3>
-                    <p>Buenos Aires es la provincia y localidad mas grande del estado de Argentina, en los Estados
-                        Unidos.
-                        Honolulu es la mas sureña de entre las principales ciudades estadounidenses. Aunque el nombre de
-                        Honolulu se refiere al área urbana en la costa sureste de la isla de Oahu, la ciudad y el
-                        condado de
-                        Honolulu han formado una ciudad-condado consolidada que cubre toda la ciudad (aproximadamente
-                        600
-                        km<sup>2</sup> de superficie).</p>
-                    <button type="button" class="btn btn-outline-light btn-sm">Conocé más</button>
+            <section id="CaC-SoloComprar">
+                <div class="row justify-content-center">98
+                    <div class="col-sm-12 col-md-10 col-lg-8 col-xl-6">
+                        <div class="card-group m-0 p-0 text-center">
+                            <div class="card m-1">
+                                <div class="card-body border-primary">
+                                    <h5 class="card-title">Estudiantes</h5>
+                                    <p class="card-text">Tienen un descuento</p>
+                                    <p class="card-title font-weight-bold">80%</p>
+                                    <p class="card-text"><small class="text-muted">* presentar
+                                            documentación</small></p>
+                                </div>
+                            </div>
+                            <div class="card m-1">
+                                <div class="card-body border-success">
+                                    <h5 class="card-title">Trainee</h5>
+                                    <p class="card-text">Tienen un descuento</p>
+                                    <p class="card-title font-weight-bold">50%</p>
+                                    <p class="card-text"><small class="text-muted">* presentar
+                                            documentación</small></p>
+                                </div>
+                            </div>
+                            <div class="card m-1">
+                                <div class="card-body border-warning">
+                                    <h5 class="card-title">Junior</h5>
+                                    <p class="card-text">Tienen un descuento</p>
+                                    <p class="card-title font-weight-bold">15%</p>
+                                    <p class="card-text"><small class="text-muted">* presentar
+                                            documentación</small></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col text-uppercase text-center"><small>venta</small>
+                                <h2>VALOR TICKET $200</h2>
+                            </div>
+                        </div>
+                        <form class="">
+                            <div class="row">
+                                <div class="col-md-6 col-sm-12 g-3">
+                                    <input type="text" class="form-control" id="nombre" placeholder="Nombre">
+                                </div>
+                                <div class="col-md-6 col-sm-12 g-3">
+                                    <input type="text" class="form-control" id="apellido" placeholder="Apellido">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12 g-3">
+                                    <input type="email" class="form-control" id="correo" placeholder="Correo">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 col-sm-12 g-3">
+                                    <label for="cantidad" class="form-label">Cantidad</label>
+                                    <input type="number" class="form-control" id="cantidad" placeholder="cantidad">
+                                </div>
+                                <div class="col-md-6 col-sm-12 g-3">
+                                    <label for="categoria" class="form-label">Categoría</label>
+                                    <select id="categoria" class="form-select">
+                                        <option selected>Seleccione...</option>
+                                        <option value="E">Estudiante</option>
+                                        <option value="T">Trainee</option>
+                                        <option value="J">Junior</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12 g-3">
+                                    <div class="alert alert-primary mt-3" role="alert">Total a Pagar: $</div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="d-grid col-6 g-3">
+                                    <button type="button" class="btn btn-success">Borrar</button>
+                                </div>
+                                <div class="d-grid col-6 g-3">
+                                    <button type="button" class="btn btn-success">Resumen</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
                 </div>
-            </section>
-            <section id="CaC-Inscripcion">
-                <form id="CaC-FormParaAnotarseH">
-                    <p class="text-center">CONVIÉRTETE EN UN</p>
-                    <h3 class="text-center">ORADOR</h3>
-                    <p class="text-center CaC-Arenga">Anótate como orador para dar una <a href="#"
-                            title="Charla de no mas de 5 minutos en la que cuentas tu idea.">charla ignite</a>.
-                        Cuéntanos de
-                        que
-                        quieres hablar!</p>
-                    <div class="CaC-Container2">
-                        <input class="form-control form-control-sm CaC-FormNomYApp" type="text" placeholder="Nombre"
-                            aria-label="Nombre del Orador">
-                        <input class="form-control form-control-sm CaC-FormNomYApp" type="text" placeholder="Apellido"
-                            aria-label="Apellido del Orador">
-                    </div>
-                    <textarea class="form-control" placeholder="Sobre que quieres hablar?" rows="3"></textarea>
-                    <p class="CaC-Aclaracion">Recuerda incluir un título para tu charla</p>
-                    <button type="submit" class="btn btn-success">Enviar</button>
-                </form>
-            </section>
-        </section>
-        <section id="CaC-SoloComprar">
-            <div class="row justify-content-center">98
-                <div class="col-sm-12 col-md-10 col-lg-8 col-xl-6">
-                    <div class="card-group m-0 p-0 text-center">
-                        <div class="card m-1">
-                            <div class="card-body border-primary">
-                                <h5 class="card-title">Estudiantes</h5>
-                                <p class="card-text">Tienen un descuento</p>
-                                <p class="card-title font-weight-bold">80%</p>
-                                <p class="card-text"><small class="text-muted">* presentar
-                                        documentación</small></p>
-                            </div>
-                        </div>
-                        <div class="card m-1">
-                            <div class="card-body border-success">
-                                <h5 class="card-title">Trainee</h5>
-                                <p class="card-text">Tienen un descuento</p>
-                                <p class="card-title font-weight-bold">50%</p>
-                                <p class="card-text"><small class="text-muted">* presentar
-                                        documentación</small></p>
-                            </div>
-                        </div>
-                        <div class="card m-1">
-                            <div class="card-body border-warning">
-                                <h5 class="card-title">Junior</h5>
-                                <p class="card-text">Tienen un descuento</p>
-                                <p class="card-title font-weight-bold">15%</p>
-                                <p class="card-text"><small class="text-muted">* presentar
-                                        documentación</small></p>
+                <br><br>
+                <!-- Desarrollo de Luis Navas Inicio  -->
+
+
+                <div class="container">
+                    <div class="row">
+                        <!-- <div class="col col-md-10 offset-md-1 col-lg-8 offset-lg-2 pt-2"> -->
+                        <div class="col col-md-1 col-lg-6">
+                            <div class="card-group">
+                                <div class="card">
+                                    <div class="card-body border-primary">
+                                        <h5 class="card-title text-center">Estudiantes</h5>
+                                        <p class="card-text text-center">Tienen un descuento</p>
+                                        <p class="card-title text-center font-weight-bold">80%</p>
+                                        <p class="card-text text-center"><small class="text-muted">* presentar
+                                                documentación</small></p>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card-body border-success">
+                                        <h5 class="card-title text-center">Trainee</h5>
+                                        <p class="card-text text-center">Tienen un descuento</p>
+                                        <p class="card-title text-center font-weight-bold">50%</p>
+                                        <p class="card-text text-center"><small class="text-muted">* presentar
+                                                documentación</small></p>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card-body border-warning">
+                                        <h5 class="card-title text-center">Junior</h5>
+                                        <p class="card-text text-center">Tienen un descuento</p>
+                                        <p class="card-title text-center font-weight-bold">15%</p>
+                                        <p class="card-text text-center"><small class="text-muted">* presentar
+                                                documentación</small></p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -200,143 +299,57 @@
                             <h2>VALOR TICKET $200</h2>
                         </div>
                     </div>
-                    <form class="">
-                        <div class="row">
-                            <div class="col-md-6 col-sm-12 g-3">
-                                <input type="text" class="form-control" id="nombre" placeholder="Nombre">
-                            </div>
-                            <div class="col-md-6 col-sm-12 g-3">
-                                <input type="text" class="form-control" id="apellido" placeholder="Apellido">
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-12 g-3">
-                                <input type="email" class="form-control" id="correo" placeholder="Correo">
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-6 col-sm-12 g-3">
-                                <label for="cantidad" class="form-label">Cantidad</label>
-                                <input type="number" class="form-control" id="cantidad" placeholder="cantidad">
-                            </div>
-                            <div class="col-md-6 col-sm-12 g-3">
-                                <label for="categoria" class="form-label">Categoría</label>
-                                <select id="categoria" class="form-select">
-                                    <option selected>Seleccione...</option>
-                                    <option value="E">Estudiante</option>
-                                    <option value="T">Trainee</option>
-                                    <option value="J">Junior</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-12 g-3">
-                                <div class="alert alert-primary mt-3" role="alert">Total a Pagar: $</div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="d-grid col-6 g-3">
-                                <button type="button" class="btn btn-success">Borrar</button>
-                            </div>
-                            <div class="d-grid col-6 g-3">
-                                <button type="button" class="btn btn-success">Resumen</button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-            <br><br>
-            <!-- Desarrollo de Luis Navas Inicio  -->
-
-
-            <div class="container">
-                <div class="row">
-                    <!-- <div class="col col-md-10 offset-md-1 col-lg-8 offset-lg-2 pt-2"> -->
-                    <div class="col col-md-1 col-lg-6">
-                        <div class="card-group">
-                            <div class="card">
-                                <div class="card-body border-primary">
-                                    <h5 class="card-title text-center">Estudiantes</h5>
-                                    <p class="card-text text-center">Tienen un descuento</p>
-                                    <p class="card-title text-center font-weight-bold">80%</p>
-                                    <p class="card-text text-center"><small class="text-muted">* presentar
-                                            documentación</small></p>
+                    <div class="row">
+                        <div class="col col-md-10 offset-md-1 col-lg-8 offset-lg-2">
+                            <form>
+                                <div class="form-row">
+                                    <div class="d-flex">
+                                        <div class="form-group col-6 col-md-6 m-1">
+                                            <input type="text" name="nombre" class="form-control"
+                                                placeholder="Nombre" />
+                                        </div>
+                                        <div class="form-row col-6 col-md-6 m-1">
+                                            <input type="text" name="apellido" class="form-control"
+                                                placeholder="Apellido" />
+                                        </div>
+                                    </div>
+                                    <div class="d-flex">
+                                        <div class="form-group col-12 col-md-12 mt-1">
+                                            <input type="mail" name="nombre" class="form-control"
+                                                placeholder="Correo" />
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="card">
-                                <div class="card-body border-success">
-                                    <h5 class="card-title text-center">Trainee</h5>
-                                    <p class="card-text text-center">Tienen un descuento</p>
-                                    <p class="card-title text-center font-weight-bold">50%</p>
-                                    <p class="card-text text-center"><small class="text-muted">* presentar
-                                            documentación</small></p>
+                                <div class="form-row">
+                                    <div class="d-flex">
+                                        <div class="form-group col-6 col-md-6 m-1">
+                                            <label for="cantidad">Cantidad</label>
+                                            <input id="cantidadEntradas" type="text" class="form-control"
+                                                placeholder="cantidad">
+                                        </div>
+                                        <div class="form-group col-6 col-md-6 m-1">
+                                            <label for="categoria">Categoría</label>
+                                            <select id="categoriaEntradas" class="form-select">
+                                                <option value="estudiante">Estudiante</option>
+                                                <option value="trainee">Trainee</option>
+                                                <option value="junior">Junior</option>
+                                            </select>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="card">
-                                <div class="card-body border-warning">
-                                    <h5 class="card-title text-center">Junior</h5>
-                                    <p class="card-text text-center">Tienen un descuento</p>
-                                    <p class="card-title text-center font-weight-bold">15%</p>
-                                    <p class="card-text text-center"><small class="text-muted">* presentar
-                                            documentación</small></p>
+                                <div class="form-row">
+                                    <div class="alert alert-primary" role="alert">Total a Pagar: $</div>
                                 </div>
-                            </div>
+                                <div class="form-row col-6 col-md-6 m-1">
+                                    <button class="btn btn-success m-1">Borrar</button>
+                                    <button class="btn btn-success m-1">Resumen</button>
+                                </div>
+                            </form>
                         </div>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col text-uppercase text-center"><small>venta</small>
-                        <h2>VALOR TICKET $200</h2>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col col-md-10 offset-md-1 col-lg-8 offset-lg-2">
-                        <form>
-                            <div class="form-row">
-                                <div class="d-flex">
-                                    <div class="form-group col-6 col-md-6 m-1">
-                                        <input type="text" name="nombre" class="form-control" placeholder="Nombre" />
-                                    </div>
-                                    <div class="form-row col-6 col-md-6 m-1">
-                                        <input type="text" name="apellido" class="form-control"
-                                            placeholder="Apellido" />
-                                    </div>
-                                </div>
-                                <div class="d-flex">
-                                    <div class="form-group col-12 col-md-12 mt-1">
-                                        <input type="mail" name="nombre" class="form-control" placeholder="Correo" />
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="form-row">
-                                <div class="d-flex">
-                                    <div class="form-group col-6 col-md-6 m-1">
-                                        <label for="cantidad">Cantidad</label>
-                                        <input id="cantidadEntradas" type="text" class="form-control"
-                                            placeholder="cantidad">
-                                    </div>
-                                    <div class="form-group col-6 col-md-6 m-1">
-                                        <label for="categoria">Categoría</label>
-                                        <select id="categoriaEntradas" class="form-select">
-                                            <option value="estudiante">Estudiante</option>
-                                            <option value="trainee">Trainee</option>
-                                            <option value="junior">Junior</option>
-                                        </select>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="form-row">
-                                <div class="alert alert-primary" role="alert">Total a Pagar: $</div>
-                            </div>
-                            <div class="form-row col-6 col-md-6 m-1">
-                                <button class="btn btn-success m-1">Borrar</button>
-                                <button class="btn btn-success m-1">Resumen</button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </section>
+            </section>
+        </div>
     </main>
     <footer>
         <nav id="CaC-Ftr" class="navbar fixed-bottom bg-dark">

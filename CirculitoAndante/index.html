@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,8 +8,134 @@
     <title>Document</title>
     <link rel="stylesheet" href="./css/estilos.css">
 </head>
+
 <body>
-    <div id="zona"></div>
+    <form action="" class="">
+        <div class="grupo">
+            <div class="subgrupo">
+                <h2>Composición</h2>
+                <div class="grupo">
+                    <div class="subgrupo">
+                        <h2>Zonas</h2>
+                        <div class="grupo">
+                            <div class="columna">
+                                <h2>Pos. Inicial</h2>
+                                <div class="subgrupo rb-azul">
+                                    <div class="campo">
+                                        <label for="ZposX">X</label>
+                                        <input type="text" name="ZposX" id="ZposX" class="TresChars">
+                                    </div>
+                                    <div class="campo">
+                                        <label for="ZposY">Y</label>
+                                        <input type="text" name="ZposY" id="ZposY" class="TresChars">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="columna">
+                                <h2>Dimensión</h2>
+                                <div class="subgrupo rb-azul">
+                                    <div class="campo">
+                                        <label for="ancho">Ancho</label>
+                                        <input type="text" name="ancho" id="ancho" class="TresChars">
+                                    </div>
+                                    <div class="campo">
+                                        <label for="alto">Alto</label>
+                                        <input type="text" name="alto" id="alto" class="TresChars">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="columna">
+                                <h2>Otros</h2>
+                                <div class="subgrupo rb-azul">
+                                    <div class="campo">
+                                        <label for="bkColor">Color</label>
+                                        <input type="text" name="bkColor" id="bkColor" class="TresChars">
+                                    </div>
+                                    <div class="campo">
+                                        <label for="zonaID">ID (op.)</label>
+                                        <input type="text" name="zonaID" id="zonaID" class="TresChars">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="columna">
+                                <h2>Acciones</h2>
+                                <div class="subgrupo rb-azul">
+                                    <div class="campo">
+                                        <input type="button" class="accion" onclick="crearZona()" value="Crear">
+                                        <input type="button" class="accion" onclick="eliminarZona()" value="Eliminar">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="subgrupo">
+                        <h2>Elementos</h2>
+                        <div class="grupo">
+                            <div class="columna">
+                                <h2>Pos. Inicial</h2>
+                                <div class="subgrupo rb-azul">
+                                    <div class="campo">
+                                        <label for="posX">X</label>
+                                        <input type="text" name="posX" id="posX" class="TresChars">
+                                    </div>
+                                    <div class="campo">
+                                        <label for="posY">Y</label>
+                                        <input type="text" name="posY" id="posY" class="TresChars">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="columna">
+                                <h2>Velocidad</h2>
+                                <div class="subgrupo rb-azul">
+                                    <div class="campo">
+                                        <label for="incX">Horizontal</label>
+                                        <input type="text" name="incX" id="incX" class="TresChars">
+                                    </div>
+                                    <div class="campo">
+                                        <label for="incY">Vertical</label>
+                                        <input type="text" name="incY" id="incY" class="TresChars">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="columna">
+                                <h2>Tamaño</h2>
+                                <div class="subgrupo rb-azul">
+                                    <div class="campo">
+                                        <label for="dimension">Tamaño</label>
+                                        <input type="text" name="dimension" id="dimension" class="TresChars">
+                                    </div>
+                                    <div class="campo">
+                                        <label for="etiqueta">ID (op.)</label>
+                                        <input type="text" name="etiqueta" id="etiqueta" class="TresChars">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="columna">
+                                <h2>Acciones</h2>
+                                <div class="subgrupo rb-azul">
+                                    <div class="campo">
+                                        <input type="button" class="accion" onclick="crearElemento()" value="Crear">
+                                        <input type="button" class="accion" onclick="eliminarElemento()" value="Eliminar">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="subgrupo">
+                <h2>Ejecución</h2>
+                <div class="grupo">
+                    <div class="campo">
+                        <label for="velocidad">Velocidad (1..5)</label>
+                        <input type="text" name="velocidad" class="TresChars">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="zona"></div>
+    </form>
     <script src="./js/app.js"></script>
 </body>
+
 </html>
