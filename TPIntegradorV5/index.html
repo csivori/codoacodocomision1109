@@ -24,10 +24,13 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div class="navbar-nav">
-                        <a class="nav-link active" aria-current="page" href="#">La conferencia</a>
-                        <a class="nav-link" href="#CaC-Oradores">Los oradores</a>
-                        <a class="nav-link" href="#CaC-Lugar">El lugar y la fecha</a>
-                        <a class="nav-link" href="#CaC-Inscripcion">Conviértete en orador</a>
+                        <a class="nav-link active" aria-current="page" href="javascript:void(0)" onclick="irA('#')">La
+                            conferencia</a>
+                        <a class="nav-link" href="javascript:void(0)" onclick="irA('#CaC-Oradores')">Los oradores</a>
+                        <a class="nav-link" href="javascript:void(0)" onclick="irA('#CaC-Lugar')">El lugar y la
+                            fecha</a>
+                        <a class="nav-link" href="javascript:void(0)" onclick="irA('#CaC-Inscripcion')">Conviértete en
+                            orador</a>
                         <a class="nav-link CaC-Compra" href="javascript:void(0)" onclick="comprarTickets()">Comprar
                             tickets</a>
                     </div>
@@ -48,7 +51,8 @@
                         que
                         tenemos para ti. Te esperamos!</p>
                     <div id="CaC-HdrBgImageBtn" class="d-flex flex-row flex-wrap justify-content-end">
-                        <a href="#CaC-Inscripcion" class="btn btn-outline-light mt-1">Quiero ser orador</a>
+                        <a href="javascript:void(0)" onclick="irA('#CaC-Inscripcion')"
+                            class="btn btn-outline-light mt-1">Quiero ser orador</a>
                         <a class="btn btn-success mt-1 ms-2" href="javascript:void(0)"
                             onclick="comprarTickets()">Comprar tickets</a>
                     </div>
@@ -126,11 +130,12 @@
                         Honolulu han formado una ciudad-condado consolidada que cubre toda la ciudad (aproximadamente
                         600
                         km<sup>2</sup> de superficie).</p>
-                    <button type="button" class="btn btn-outline-light btn-sm">Conocé más</button>
+                    <button type="button" class="btn btn-outline-light btn-sm" href="javascript:void(0)"
+                    onclick='conocerMasElLugar()'>Conocé más</button>
                 </div>
             </section>
             <section id="CaC-Inscripcion">
-                <div id="CaC-FormParaAnotarseH">
+                <form id="CaC-FormParaAnotarseH">
                     <p class="text-center">CONVIÉRTETE EN UN</p>
                     <h3 class="text-center">ORADOR</h3>
                     <p class="text-center CaC-Arenga">Anótate como orador para dar una <a href="#"
@@ -139,22 +144,23 @@
                         que
                         quieres hablar!</p>
                     <div class="d-flex flex-row flex-wrap justify-content-between">
-                        <input class="form-control form-control-sm CaC-FormNomYApp" type="text" placeholder="Nombre"
+                        <input id="nombreOrador" class="form-control form-control-sm CaC-FormNomYApp" type="text" placeholder="Nombre"
                             aria-label="Nombre del Orador">
-                        <input class="form-control form-control-sm CaC-FormNomYApp" type="text" placeholder="Apellido"
+                        <input id="apellidoOrador" class="form-control form-control-sm CaC-FormNomYApp" type="text" placeholder="Apellido"
                             aria-label="Apellido del Orador">
                     </div>
-                    <textarea class="form-control" placeholder="Sobre que quieres hablar?" rows="3"></textarea>
+                    <textarea id="temaOrador" class="form-control" placeholder="Sobre que quieres hablar?" rows="3"></textarea>
                     <p class="CaC-Aclaracion">Recuerda incluir un título para tu charla</p>
-                    <button type="submit" class="btn btn-success">Enviar</button>
-                </div>
+                    <button type="button" class="btn btn-success" href="javascript:void(0)"
+                    onclick="inscripcionOrador()">Enviar</button>
+                </form>
             </section>
         </section>
         <section id="CaC-SoloComprar">
-                <div class="container-fluid d-flex justify-content-center">
-                    <div class="col-sm-12 col-md-10 col-lg-8 col-xl-6">
+            <div class="container-fluid d-flex justify-content-center">
+                <div class="col-sm-12 col-md-10 col-lg-8 col-xl-6">
                     <div class="card-group mt-4 p-0 text-center">
-                        <div class="card border border-3 border-primary m-1">
+                        <div class="card border border-3 border-primary m-1" onclick="setearCategoria('E')">
                             <div class="card-body">
                                 <h5 class="card-title">Estudiantes</h5>
                                 <p class="card-text">Tienen un descuento</p>
@@ -163,7 +169,7 @@
                                         documentación</small></p>
                             </div>
                         </div>
-                        <div class="card border border-3 border-success m-1">
+                        <div class="card border border-3 border-success m-1" onclick="setearCategoria('T')">
                             <div class="card-body">
                                 <h5 class="card-title">Trainee</h5>
                                 <p class="card-text">Tienen un descuento</p>
@@ -172,7 +178,7 @@
                                         documentación</small></p>
                             </div>
                         </div>
-                        <div class="card border border-3 border-warning m-1">
+                        <div class="card border border-3 border-warning m-1" onclick="setearCategoria('J')">
                             <div class="card-body">
                                 <h5 class="card-title">Junior</h5>
                                 <p class="card-text">Tienen un descuento</p>
