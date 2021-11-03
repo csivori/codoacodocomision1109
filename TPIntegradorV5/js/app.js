@@ -5,7 +5,7 @@ const correoValido = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 const nombreValido = /^[a-zA-ZÀ-ÿ\s]{1,40}$/; // Letras y espacios, pueden llevar acentos.
 const telefonoValido = /^[+]\d{7,14}$/; // 7 a 14 numeros.
 const precioTicket = 200;
-let mostrarPaso = false; //Lo uso en true para debuggear en la consola
+let mostrarPaso = true; //Lo uso en true para debuggear en la consola
 let estaEnModoCompraTicket = false;
 let elemNavBarLogo = document.getElementById("CaC-NavBarLogo");
 let elemSoloView = document.getElementById("CaC-SoloView");
@@ -36,9 +36,21 @@ function resumenTickets() {
         mp(`5.2.-Seleccionó ${elemFrmCpraTotalAPagar.id} con valor ${elemFrmCpraTotalAPagar.innerHTML} en resumenTickets()`);
         resultado = calcularCostoTickets()
         elemFrmCpraTotalAPagar.innerHTML = `<strong>Total a Pagar: $ ${resultado.total}</strong> (<small>Detalle: ${resultado.detalle}</small>)`;
+        forzarScrRefresh(elemFrmCpraTotalAPagar, () => { alert('En Construcción: Ahora se calculará el Total A Pagar y en el futuro Lanzar Proceso de Compra !!!'); });
         mp(`5.3.-Recalculó ${elemFrmCpraTotalAPagar.id} con valor ${elemFrmCpraTotalAPagar.innerHTML} en resumenTickets()`);
-        alert('En Construcción: Ahora se calculará el Total A Pagar y en el futuro Lanzar Proceso de Compra !!!');
+//        alert('En Construcción: Ahora se calculará el Total A Pagar y en el futuro Lanzar Proceso de Compra !!!');
     }
+}
+
+let intervalId = 0;
+function forzarScrRefresh(elemento, funcionPosterior) {
+    // No anduvo:
+    // let displayActual = elemFrmCpraTotalAPagar.style.display;
+    // elemFrmCpraTotalAPagar.style.display = 'none';
+    // elemFrmCpraTotalAPagar.style.display = displayActual;
+
+    intervalId = setInterval((hnd) => { mp(`handler: ${hnd} / intervalId: ${intervalId}`); clearInterval(intervalId); funcionPosterior(); }, 5000);
+    mp(`Framing Seteado en 500 msegs.`);
 }
 
 function conocerMasElLugar() {

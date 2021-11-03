@@ -105,4 +105,11 @@ const CrearFormulario = (i, bViewOnly) => {
       </form>`;
 };
 
-mostrarMascotas();
+const CrearFormulario4 = () => {
+for (var i=0; i<2; i++){
+  continue
+}
+console.log(i);
+}
+CrearFormulario4();
+// mostrarMascotas();
