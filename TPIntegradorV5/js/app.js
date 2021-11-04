@@ -49,7 +49,7 @@ function forzarScrRefresh(elemento, funcionPosterior) {
     // elemFrmCpraTotalAPagar.style.display = 'none';
     // elemFrmCpraTotalAPagar.style.display = displayActual;
 
-    intervalId = setInterval((hnd) => { mp(`handler: ${hnd} / intervalId: ${intervalId}`); clearInterval(intervalId); funcionPosterior(); }, 5000);
+    intervalId = setInterval((hnd) => { mp(`handler: ${hnd} / intervalId: ${intervalId}`); clearInterval(intervalId); funcionPosterior(); }, 500);
     mp(`Framing Seteado en 500 msegs.`);
 }
 

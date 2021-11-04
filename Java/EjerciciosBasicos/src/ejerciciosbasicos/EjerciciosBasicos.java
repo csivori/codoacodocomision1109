@@ -5,81 +5,112 @@
 package ejerciciosbasicos;
 
 import java.util.Scanner;
-import javax.swing.*;
+import javax.swing.JOptionPane;
 
 public class EjerciciosBasicos {
     
+    static boolean verConSwing = false;
+    static MenuItem[] opciones;
+
     public static void main(String[] args) {
+        inicializarMenu();
         char opcion = mostrarMenu();
         while (opcion != 'S'){
             switch (opcion){
-                case 'A':
-                case 'B':
-                case 'C':
-                case 'D':
-                case 'E':
+                case 'A', 'B', 'C', 'D', 'E' -> {
                     EjerciciosBasicos1 ej = new EjerciciosBasicos1(110);
                     switch (opcion){
-                        case 'A':{
+                        case 'A' -> {
                             ej.EjecutarSalidasXPantalla();
-                            break;
                         }
-                        case 'B':{
+                        case 'B' -> {
                             ej.EjecutarIngresosXPantalla();
-                            break;
                         }
-                        case 'C':{
+                        case 'C' -> {
                             ej.EjecutarOperacionesDeComparacion();
-                            break;
                         }
-                        case 'D':{
+                        case 'D' -> {
                             ej.EjecutarOperacionesMatematicas();
-                            break;
                         }
-                        case 'E':{
+                        case 'E' -> {
                             ej.EjecutarOperacionesConCaracteres();
-                            break;
                         }
                     }
-/*                case 'A' -> {
-                    EjerciciosBasicos1 ej = new EjerciciosBasicos1(110);
-                    ej.Ejecutar();
                 }
-                case 'B' -> {
-                    EjerciciosBasicos1 ej = new EjerciciosBasicos3(110);
-                    ej.Ejecutar();
+                case 'Z' -> {
+                    verConSwing = !verConSwing;
                 }
-                case 'C' -> {
-                    EjerciciosBasicos3 ej = new EjerciciosBasicos3(110);
-                    ej.Ejecutar();
-                }
-*/            
             }
             opcion = mostrarMenu();
         }
     }
 
-    public static char mostrarMenu() {
-        System.out.println("\n\nSeleccione que Ejercicios desea ver\n");
-        System.out.println("A -> Ejercicios Básicos - Salidas x Pantalla: print & println");
-        System.out.println("B -> Ejercicios Basicos - Ingresos x Pantalla: Scanner / next()");
-        System.out.println("C -> Ejercicios Basicos - Operaciones de Comparación (<, >, ==)");
-        System.out.println("D -> Ejercicios Basicos - Operaciones Matemáticas (+, -, *, /, %)");
-        System.out.println("E -> Ejercicios Basicos - Operaciones con Caracteres (char <-> ASCII code)");
-        char op = ObtenerOpcionrMenu1();
+    private static void inicializarMenu(){
+        opciones = new MenuItem[10];
+        opciones[0] = new MenuItem('A', "Ejercicios Básicos - Salidas x Pantalla: print & println");
+        opciones[1] = new MenuItem('B', "Ejercicios Basicos - Ingresos x Pantalla: Scanner / next()");
+        opciones[2] = new MenuItem('C', "Ejercicios Basicos - Operaciones de Comparación (<, >, ==)");
+        opciones[3] = new MenuItem('D', "Ejercicios Basicos - Operaciones Matemáticas (+, -, *, /, %)");
+        opciones[4] = new MenuItem('E', "Ejercicios Basicos - Operaciones con Caracteres (char <-> ASCII code)");
+        opciones[5] = new MenuItem('Z', "Cambiar Presentación a modo ");
+    }
+        
+    private static char mostrarMenu() {
+        return verConSwing ? mostrarMenuConSwing() : mostrarMenuConScanner();
+    }
+    
+    private static char mostrarMenuConScanner() {
+        System.out.println("\n\nSeleccione que Ejercicios desea ver (SCANNER)\n");
+        for (MenuItem item : opciones) {
+            if (item != null) {
+                String msg = item.getItemMenu();
+                if (item.getOpcion() == 'Z') { 
+                    msg += (verConSwing ? "Scanner" : "Swing");
+                }
+                System.out.println(msg);
+            }
+        }
+        char op = ObtenerOpcionrMenuConScanner();
         op = (new RutinasBasicas("->")).toUpperCase(op);
         System.out.println("op después: " + op);
         return op;
     }
     
-    public static char ObtenerOpcionrMenu1() {
+    public static char mostrarMenuConSwing() {
+        System.out.println("\n\nSeleccione que Ejercicios desea ver (SWING)\n");
+        System.out.println("A -> Ejercicios Básicos - Salidas x Pantalla: print & println");
+        System.out.println("B -> Ejercicios Basicos - Ingresos x Pantalla: Scanner / next()");
+        System.out.println("C -> Ejercicios Basicos - Operaciones de Comparación (<, >, ==)");
+        System.out.println("D -> Ejercicios Basicos - Operaciones Matemáticas (+, -, *, /, %)");
+        System.out.println("E -> Ejercicios Basicos - Operaciones con Caracteres (char <-> ASCII code)");
+        char op = ObtenerOpcionrMenuConSwing();
+        op = (new RutinasBasicas("->")).toUpperCase(op);
+        System.out.println("op después: " + op);
+        return op;
+    }
+/*
+    public static char ObtenerOpcionrMenu() {
+        return (verConSwing) ? ObtenerOpcionrMenuConSwing() : ObtenerOpcionrMenuConScanner();
+    }    
+*/
+    public static char ObtenerOpcionrMenuConScanner() {
         Scanner sn = new Scanner(System.in);
         System.out.print("\nIntroduzca la Opción (S: Salir): ");
         return (char) sn.next().charAt(0);
     }    
 
-    public char ObtenerOpcionrMenu2() {
+    public static char ObtenerOpcionrMenuConSwing() {
+//        Scanner sn = new Scanner(System.in);
+        System.out.print("\nEntró a ObtenerOpcionrMenuConSwing2()");
+//      
+//        String apellido = JOptionPane.showInputDialog("ingrese Apellido:");
+//        int opcion = JOptionPane.showOptionDialog(null, "Titulo", "SubTitulo", JOptionPane.DEFAULT_OPTION, JOptionPane.QUESTION_MESSAGE, null, opciones, opciones[0]);
+        int opcion = JOptionPane.showOptionDialog(null, "Titulo", "SubTitulo", JOptionPane.DEFAULT_OPTION, JOptionPane.QUESTION_MESSAGE, null, null, null);
+        System.out.print("\nEntró a ObtenerOpcionrMenuConSwing3()");
+        
+        System.out.println("\nOpción: " + opcion);
         System.out.print("\nIntroduzca la Opción (S: Salir): ");
-        return (char) (new Scanner(System.in)).next().charAt(0);
+//        return (char) sn.next().charAt(0);
+        return 'Z';
     }    
 }
