@@ -10,7 +10,7 @@ import java.util.Scanner;
 
 public class EjerciciosBasicos1 {
     
-    private final int ancho;
+    private int ancho;
     private final RutinasBasicas rb = new RutinasBasicas("->");
     private final Scanner sn = new Scanner(System.in);        
 
@@ -18,6 +18,11 @@ public class EjerciciosBasicos1 {
         this.ancho = ancho;
     }
     
+    public void EjecutarSalidasXPantalla(int ancho) {
+        this.ancho = ancho;
+        EjecutarSalidasXPantalla();
+    }
+
     public void EjecutarSalidasXPantalla() {
         int ejercicio = 1;
         System.out.println("\n" + rb.cAlg("EJEMPLOS de Salidas por Pantalla (print y println)\n", ancho));
@@ -42,8 +47,24 @@ public class EjerciciosBasicos1 {
         System.out.println(100 + 20 + 3 + "... Hola " + "Mundo " + (int) ejercicio/2 + (int) ejercicio/2 + "!" + "  CUAC !!!");
         System.out.print(rb.salidaEj(ejercicio, "println(100 + 20 + 3 + \"... Hola \" + \"Mundo \" + (ejercicio/2 + ejercicio/2) + \"!\");", ancho));
         System.out.println(100 + 20 + 3 + "... Hola " + "Mundo " + (ejercicio/2 + ejercicio/2) + "!" + "   FUNCIONA!");
+        ejercicio++;    
+    
+        System.out.print(rb.salidaEj(ejercicio, "println(\"Imprimo \" + (int) 5);", ancho));
+        System.out.println("Imprimo " + (int) 5);
+        System.out.print(rb.salidaEj(ejercicio, "println(\"Imprimo \" + (double) 5.03);", ancho));
+        System.out.println("Imprimo " + (double) 5.03);
+        System.out.print(rb.salidaEj(ejercicio, "println(\"Imprimo \" + (double) 235345345345.234534);", ancho));
+        System.out.println("Imprimo " + (double) 235345345345.234534);
+        System.out.print(rb.salidaEj(ejercicio, "println(\"Imprimo \" + (double) 123123232);", ancho));
+        System.out.println("Imprimo " + (double) 123123232);
+        ejercicio++;        
     }
 
+    public void EjecutarIngresosXPantalla(int ancho) {
+        this.ancho = ancho;
+        EjecutarIngresosXPantalla();
+    }
+    
     public void EjecutarIngresosXPantalla() {
         int ejercicio = 1;
         System.out.println("\n" + rb.cAlg("EJEMPLOS de Ingresos por Pantalla (clase Scanner)\n", ancho));
@@ -52,14 +73,38 @@ public class EjerciciosBasicos1 {
 //        Scanner sn = new Scanner(System.in); Lo creo como atributo de la clase
         ejercicio++;
         
-        System.out.print(rb.salidaEj(ejercicio, "println(\"Introduzca el 1º Operador: \"); int int1 = sn.nextInt();", ancho));
+        System.out.print("\n" + rb.salidaEj(ejercicio, "println(\"Introduzca el 1º Operador: \"); int int1 = sn.nextInt();", ancho));
         System.out.print("Introduzca el 1º Operador: ");
         int int1 = sn.nextInt();
         System.out.print(rb.salidaEj(ejercicio, "println(\"Introduzca el 2º Operador: \"); int int2 = sn.nextInt();", ancho));
         System.out.print("Introduzca el 2º Operador: ");
         int int2 = sn.nextInt();
-        System.out.print("El 1º Operador ingresado es " + int1 + " y el 2º Operador ingresado es " + int2);
+        System.out.println("El 1º Operador ingresado es " + int1 + " y el 2º Operador ingresado es " + int2);
         ejercicio++;        
+
+        System.out.print("\n" + rb.salidaEj(ejercicio, "println(\"Introduzca el 1º Operador: \"); double d1 = sn.nextDouble();", ancho));
+        System.out.print("Introduzca el 1º Operador: ");
+        double d1 = sn.nextDouble();
+        System.out.print(rb.salidaEj(ejercicio, "println(\"Introduzca el 2º Operador: \"); double d2 = sn.nextDouble();", ancho));
+        System.out.print("Introduzca el 2º Operador: ");
+        double d2 = sn.nextDouble();
+        System.out.println("El 1º Operador ingresado es " + d1 + " y el 2º Operador ingresado es " + d2);
+        ejercicio++; 
+        
+        System.out.print("\n" + rb.salidaEj(ejercicio, "println(\"Introduzca el 1º Operador: \"); String s1 = sn.nextLine();", ancho));
+        System.out.print("Introduzca el 1º Operador: ");
+        String s1 = sn.nextLine();
+        System.out.print(rb.salidaEj(ejercicio, "println(\"Introduzca el 2º Operador: \"); String s2 = sn.nextLine();", ancho));
+        System.out.print("Introduzca el 2º Operador: ");
+        String s2 = sn.nextLine();
+        System.out.println("El 1º String ingresado es " + s1);
+        System.out.println("El 2º String ingresado es " + s2);
+        ejercicio++;        
+    }
+    
+    public void EjecutarOperacionesDeComparacion(int ancho) {
+        this.ancho = ancho;
+        EjecutarOperacionesDeComparacion();
     }
     
     public void EjecutarOperacionesDeComparacion() {
@@ -75,6 +120,11 @@ public class EjerciciosBasicos1 {
         System.out.print(rb.salidaEj(ejercicio, "println(int1 + ((int1 > int2) ? \" es > que \" : ((int1 < int2) ? \" es < que \" : \" es = a \")) + int2);", ancho));
         System.out.println(int1 + ((int1 > int2) ? " es > que " : ((int1 < int2) ? " es < que " : " es = a ")) + int2);
         ejercicio++;
+    }
+    
+    public void EjecutarOperacionesMatematicas(int ancho) {
+        this.ancho = ancho;
+        EjecutarOperacionesMatematicas();
     }
     
     public void EjecutarOperacionesMatematicas() {
@@ -107,6 +157,11 @@ public class EjerciciosBasicos1 {
         ejercicio++;
     }
 
+    public void EjecutarOperacionesConCaracteres(int ancho) {
+        this.ancho = ancho;
+        EjecutarOperacionesConCaracteres();
+    }
+    
     public void EjecutarOperacionesConCaracteres() {
         int ejercicio = 1;
         System.out.println("\n" + rb.cAlg("EJEMPLOS de Operaciones con Caracteres\n", ancho));
