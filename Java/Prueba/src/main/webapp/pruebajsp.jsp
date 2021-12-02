@@ -12,13 +12,11 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <%
-            String saludo="Hola";
-            String nombre="Carlos";
-        %>
+        <% String saludo="Hola"; String nombre="Carlos";%>
         <h1>Hello World!</h1>
-        <p><%=saludo+" "+nombre%></p>
-        <p><%=saludo =nombre%></p>
-        <p><%= new java.util.Date()%></p>
+        <p>Así <strong>&lt;%=saludo+" "+nombre%&gt;</strong> NO sobreescribe una variable a la otra: <%=saludo+" "+nombre%></p>
+        <p>Así <strong>&lt;%=saludo =nombre%&gt;</strong> sobreescribe una variable a la otra: <%=saludo =nombre%></p>
+        <p>Así <strong>&lt;%=saludo+" "+nombre%&gt;</strong> NO sobreescribe una variable a la otra: <%=saludo+" "+nombre%></p>
+        <p>Esta es la Fecha y Hora Actual: <strong><%= new java.util.Date()%></strong></p>
     </body>
 </html>

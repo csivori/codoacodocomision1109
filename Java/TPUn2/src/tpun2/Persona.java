@@ -1,7 +1,5 @@
 package tpun2;
 
-import java.util.Scanner;
-
 public class Persona {
     private String nombre, apellido;
     private int edad;
@@ -13,41 +11,14 @@ public class Persona {
         this.edad = edad;
     }
 
-    public String getNombre() {
-        return nombre;
-    }
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-
-    public String getApellido() {
-        return apellido;
-    }
-
-    public void setApellido(String apellido) {
-        this.apellido = apellido;
-    }
-
-    public int getEdad() {
-        return edad;
-    }
-
-    public void setEdad(int edad) {
-        this.edad = edad;
-    }
-    
     public void cargar(){cargar(true);}
     public void cargar(Boolean mostrarTitulo){
-        Scanner sn = new Scanner(System.in);        
-    
         if (mostrarTitulo) System.out.println("\nIngrese los datos de la Persona\n");
-        System.out.print("Nombre: ");
-        nombre = sn.nextLine();
-        System.out.print("Apellido: ");
-        apellido = sn.nextLine();
-        System.out.print("Edad: ");
-        edad = sn.nextInt();
+        Scanner2 sn2 = new Scanner2();
+        this.nombre = sn2.cargarCampo("Nombre", this.nombre);
+        this.apellido = sn2.cargarCampo("Apellido", this.apellido);
+        this.edad = sn2.cargarCampo("Edad", this.edad);
+        sn2.close();
     }
 
     public void mostrar(){mostrar(true);}

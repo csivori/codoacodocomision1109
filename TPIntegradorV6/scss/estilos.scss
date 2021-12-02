@@ -1,0 +1,14 @@
+/////////////////////////////////
+// 1. Patron de Colores
+/////////////////////////////////
+// $verdeCompra: #27A844;
+$verdeCompra: red;
+
+/////////////////////////////////
+// 2. Patron de Colores
+/////////////////////////////////
+$success: $verdeCompra;
+$success: blue;
+$enable-rounded: false;
+
+@import "../lib/bootstrap/scss/bootstrap";

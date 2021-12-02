@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context path="/CRUD2"/>
+    <Resource name="jdbc/productos" auth="Container" type="javax.sql.DataSource" maxActive="15" maxIdle="3" maxWait="5000" 
+              username="root" password="" driverClassName="com.mysql.cj.jdbc.Driver" url="jdbc:mysql://localhost:3306/pildoras">
+    </Resource>
+</Context>
