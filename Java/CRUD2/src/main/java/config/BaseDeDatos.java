@@ -20,7 +20,7 @@ public class BaseDeDatos {
     public Connection getConection(){
         Connection con = null;
         try{
-            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/comision1109", "carlos", "prueba");
+            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/pildoras", "carlos", "prueba");
         } catch(SQLException e){
             SysOut.dbgprintln(e.toString(), 0);
         }

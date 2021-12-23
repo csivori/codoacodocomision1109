@@ -11,7 +11,8 @@ import java.util.logging.Logger;
 public class Conexion {
 // ATRIBUTOS PUBLICOS
 
-    public String driver = "com.mysql.cj.jdbc.Driver";
+    private String driver = "com.mysql.cj.jdbc.Driver";
+    private Exception ultimaExcepcion;
 
 // ATRIBUTOS PRIVADOS
 // CONSTRUCTORES
@@ -21,9 +22,14 @@ public class Conexion {
         } catch (ClassNotFoundException ex) {
             Logger.getLogger(Conexion.class.getName()).log(Level.SEVERE, null, ex);
         }
+        this.ultimaExcepcion = null;
     }
 
 // GETTERs & SETTERs
+    public Exception getUltimaExcepcion() {
+        return ultimaExcepcion;
+    }
+
 // OVERRIDES
     @Override
     public String toString() {
@@ -38,9 +44,12 @@ public class Conexion {
     public Connection getConection() {
         Connection con = null;
         try {
-            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/comision1109", "carlos", "prueba");
+//            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/comision1109", "carlos", "prueba");
+//          con = DriverManager.getConnection("jdbc:mysql://db-cac.mysql.database.azure.com:3306/comision1109", "csivori", "CaC#1109");
+            con = DriverManager.getConnection("jdbc:mysql://db-cac.mysql.database.azure.com:3306/comision1109", "cac_root", "CodoaCodo#1109");
         } catch (SQLException e) {
-            System.out.println(e.toString());
+            this.ultimaExcepcion = e;
+//            System.out.println(e.toString());
         }
         return con;
     }

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Context path="/CRUD2"/>
-    <Resource name="jdbc/productos" auth="Container" type="javax.sql.DataSource" maxActive="15" maxIdle="3" maxWait="5000" 
-              username="root" password="" driverClassName="com.mysql.cj.jdbc.Driver" url="jdbc:mysql://localhost:3306/pildoras">
-    </Resource>
+<Context path="/CRUD2">
+  <!--   <WatchedResource>WEB-INF/web.xml</WatchedResource> -->
+  <Resource auth="Container" driverClassName="com.mysql.cj.jdbc.Driver" maxActive="3" maxIdle="1" maxWait="5000" name="jdbc/productos" password="prueba" type="javax.sql.DataSource" url="jdbc:mysql://localhost:3306/pildoras/" username="carlos"/>
+  <ResourceLink global="jdbc/productos" name="Productos" type="javax.sql.DataSource"/>
 </Context>
