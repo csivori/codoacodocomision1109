@@ -1,31 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carrousel a Pedal</title>
-    <link rel="stylesheet" href="./css/estilos.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    #aca{
+      background-color: aquamarine;
+      border: 2px dashed black;
+      margin:100px;
+      padding: 20px;
+      width: 50vw;
+      height: 50vh;
+      overflow: auto;
+    }
+
+  </style>
 </head>
-
 <body>
-    <div id="Carrousel">
-        <div id="Imagen">
-        </div>
-        <div id="Controles">
-            <div id="Navegacion">
-                <a href="#" id="Atras">&lt;</a>
-                <a href="#" id="Adelante">&gt;</a>
-            </div>
-            <div id="Puntos">
-                <div id="Punto1" class="PuntoActivo"></div>
-                <div id="Punto2" class="Punto"></div>
-                <div id="Punto3" class="Punto"></div>
-            </div>
-        </div>
-    </div>
-    <script src="./js/app.js"></script>
+  <div id="aca"></div>
+  <script src="./js/carouselAPedalConOOP.js"></script>
+  <script src="./js/app.js"></script>
+  <!-- <button onclick="retroceder()"><</button>
+  <button onclick="avanzar()">></button> -->
 </body>
-
 </html>
